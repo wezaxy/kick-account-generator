@@ -11,8 +11,6 @@ This project is designed to bypass the Kasada (KPSDK) protection system used by 
 - 📩 Automatic email verification using temp mail
 - 🔐 Random username and strong password generator
 - 🔁 Continuous account creation loop
-- 🧠 Async architecture with multithreading
-- 🆓 100% free API-based solver
 
 ---
 
