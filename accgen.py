@@ -96,7 +96,7 @@ async def getcode(mail):
     async with aiohttp.ClientSession() as session:
         js={ "name": mail.split('@')[0],  "domain": "dataarchive.site"  }
         
-        async with session.post( "http://tempmail.dataarchive.site/api/session", json=js,headers={"content-type": "application/json","User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36" }) as res:
+        async with session.post( "https://tempmail.dataarchive.site/api/session", json=js,headers={"content-type": "application/json","User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36" }) as res:
             print(await res.json())
             if res.status == 200: 
                 response_data = await res.json()
