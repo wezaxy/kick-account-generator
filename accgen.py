@@ -200,9 +200,6 @@ def worker(mail):
 
 async def ol():
     try:
-    
-        session = aiocurl.Session()
-
         mail =  generate_random_string(8)+"@"+"dataarchive.site"
         mail = mail.lower()
         threads = []
