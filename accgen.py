@@ -200,7 +200,7 @@ def worker(mail):
 
 async def ol():
     try:
-        mail =  generate_random_string(8)+"@"+"dataarchive.site"
+        mail =  generate_random_string(8)+"@"+"flavel.nl"
         mail = mail.lower()
         threads = []
         t = threading.Thread(target=worker, args=( mail,))
