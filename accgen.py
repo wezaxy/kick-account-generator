@@ -94,7 +94,7 @@ import urllib.parse
 
 async def getcode(mail):
     async with aiohttp.ClientSession() as session:
-        js={ "name": mail.split('@')[0],  "domain": "flavel.nl"  }
+        js={ "name": mail.split('@')[0],  "domain": "dataarchive.site"  }
         
         async with session.post( "https://tempmail.dataarchive.site/api/session", json=js,headers={"content-type": "application/json","User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36" }) as res:
             print(await res.json())
@@ -200,7 +200,7 @@ def worker(mail):
 
 async def ol():
     try:
-        mail =  generate_random_string(8)+"@"+"flavel.nl"
+        mail =  generate_random_string(8)+"@"+"dataarchive.site"
         mail = mail.lower()
         threads = []
         t = threading.Thread(target=worker, args=( mail,))
