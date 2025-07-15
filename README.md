@@ -90,4 +90,5 @@ This tool is for educational and research purposes only. Any misuse is strictly 
 Need help or have questions?  
 
 Reach out via Telegram: [@wezaxy](https://t.me/wezassy)
-discord: wezaxy
+discord: wezaxy 
+https://discord.gg/c44FB4PFcW
