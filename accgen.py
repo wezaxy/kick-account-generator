@@ -659,7 +659,7 @@ async def ol():
         
         
         threads = []
-        for i in range(1):
+        for i in range(4):
             t = threading.Thread(target=worker, args=())
             threads.append(t)
             t.start()
@@ -675,3 +675,4 @@ async def ol():
 
 while True:
  asyncio.run(ol())
+
