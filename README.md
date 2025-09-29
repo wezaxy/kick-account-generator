@@ -1,16 +1,15 @@
+# 🛡️ Kick.com Kasada (KPSDK) Solver – Free API Automation
 
-# 🛡️ Kick.com Kasada (KPSDK) Solver - Free API Automation
-
-This project is designed to bypass the Kasada (KPSDK) protection system used by [kick.com](https://kick.com) by using a free API via RapidAPI. It automatically generates usernames and passwords, handles email verification with temp mail, and registers new accounts.
+This project automates the process of bypassing the Kasada (KPSDK) protection system used by **Kick.com**. It integrates with a free API on **RapidAPI** to solve Kasada challenges, automatically generates usernames and passwords, verifies emails via IMAP, and continuously registers new accounts.
 
 ---
 
 ## 🚀 Features
 
-- ✅ KPSDK (Kasada) Solver via RapidAPI
-- 📩 Automatic email verification using temp mail
-- 🔐 Random username and strong password generator
-- 🔁 Continuous account creation loop
+* ✅ KPSDK (Kasada) solver via **RapidAPI**
+* 📩 Automatic email verification using **IMAP**
+* 🔐 Random username and strong password generator
+* 🔁 Continuous account creation loop
 
 ---
 
@@ -18,60 +17,80 @@ This project is designed to bypass the Kasada (KPSDK) protection system used by 
 
 ### Requirements
 
-- Python 3.8+
-- Install the required packages:
+* **Python 3.8+**
+* Install required dependencies:
 
 ```bash
-pip install aiohttp 
+pip install aiohttp aiocurl
 ```
 
-### How to Use
+### API Setup
 
-1. Replace `"YOUR_API_KEY"` inside the `kasadasolv()` function with your own [RapidAPI](https://rapidapi.com/ttur5678/api/kick-kasada-kpsdk-solver-api/playground) key:
+Open `sa.py` and replace `YOUR_API_KEY` with your RapidAPI key:
 
 ```python
 headers = {
-  "x-rapidapi-key": "YOUR_API_KEY",
-  "x-rapidapi-host": "kick-kasada-kpsdk-solver-api.p.rapidapi.com"
+    "x-rapidapi-key": "YOUR_API_KEY",
+    "x-rapidapi-host": "kick-kasada-kpsdk-solver-api.p.rapidapi.com"
 }
 ```
 
-2. Run the script:
+---
+
+### Hotmail Source (Required)
+
+* Obtain Hotmail addresses from: **[https://hotmail.dataarchive.site](https://hotmail.dataarchive.site)**
+* Save them in `livelive.txt` with the following format (one entry per line):
+
+```
+email@hotmail.com:password
+```
+
+The script uses these accounts via IMAP to read Kick.com's verification emails.
+
+---
+
+### Usage
+
+1. Add your RapidAPI key into `sa.py`.
+2. Prepare `livelive.txt` with Hotmail accounts (`email:password`).
+3. (Optional) Add proxies into `babaproxy.txt` (one per line).
+4. Run the generator:
 
 ```bash
 python accgen.py
 ```
 
+> The Kasada solver logic is already implemented in `sa.py`. You only need a valid RapidAPI key.
+
 ---
 
 ## 🌐 Free Kasada Solver API
 
-This script uses a free API via RapidAPI to solve Kick’s KPSDK protection.
+This script uses the **Kick Kasada KPSDK Solver** API available on RapidAPI.
 
-🔗 **Free API URL**:  
-https://rapidapi.com/ttur5678/api/kick-kasada-kpsdk-solver-api/playground
-
-You can send 1 request/second in the free tier.
+* Playground: [https://rapidapi.com/ttur5678/api/kick-kasada-kpsdk-solver-api/playground](https://rapidapi.com/ttur5678/api/kick-kasada-kpsdk-solver-api/playground)
+* Free tier: **1 request/second**
 
 ---
 
-## 💎 Premium KPSDK Solver 
+## 💎 Premium KPSDK Solver
 
-Need higher speed or stability? A private and faster version is available for purchase.
+Need higher performance or stability? A **private premium version** is available for purchase on RapidAPI.
 
-https://rapidapi.com/ttur5678/api/kick-kasada-kpsdk-solver-api/playground
+* Premium API: [https://rapidapi.com/ttur5678/api/kick-kasada-kpsdk-solver-api/playground](https://rapidapi.com/ttur5678/api/kick-kasada-kpsdk-solver-api/playground)
 
 ---
 
 ## 📁 Output
 
-All created accounts will be saved to a local `kicks.json` file in this format:
+All successfully created accounts are stored in `kicks.json` in the following format:
 
 ```json
 [
   {
     "auth": "TOKEN_HERE",
-    "mail": "example@dataarchive.site",
+    "mail": "example@hotmail.com",
     "password": "securePassword"
   }
 ]
@@ -81,14 +100,21 @@ All created accounts will be saved to a local `kicks.json` file in this format:
 
 ## ⚠️ Disclaimer
 
-This tool is for educational and research purposes only. Any misuse is strictly the user's responsibility.
+This tool is provided strictly for **educational and research purposes only**.
+The author assumes no responsibility for any misuse.
 
 ---
 
 ## 📞 Contact
 
-Need help or have questions?  
+Need assistance or have questions?
 
-Reach out via Telegram: [@wezaxy](https://t.me/wezassy)
-discord: wezaxy 
-https://discord.gg/c44FB4PFcW
+* **Telegram:** [@wezaxy](https://t.me/wezaxy)
+* **Discord:** wezaxy
+* **Community Server:** [Join Here](https://discord.gg/c44FB4PFcW)
+
+---
+
+### License
+
+Use this project responsibly. No license specified — add one if you plan to publish publicly.
