@@ -226,7 +226,7 @@ async def process_kpsdk_item():
                 proxies = f.read().splitlines()
             if not proxies:
                 print("Hata: babaproxy.txt boş!")
-                return
+                proxy =None
 
             session = aiocurl.Session()
 
@@ -675,4 +675,5 @@ async def ol():
 
 while True:
  asyncio.run(ol())
+
 
