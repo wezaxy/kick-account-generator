@@ -109,8 +109,7 @@ The author assumes no responsibility for any misuse.
 
 Need assistance or have questions?
 
-* **Telegram:** [@wezaxy](https://t.me/wezaxy)
-* **Discord:** wezaxy
+* **Discord:** wezaxyy
 * **Community Server:** [Join Here](https://discord.gg/c44FB4PFcW)
 
 ---
